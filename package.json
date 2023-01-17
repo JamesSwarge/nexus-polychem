@@ -4,7 +4,9 @@
   "description": "\"# nexus-polychem\"",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve src/index.html --public-url / --dist-dir dist",
+    "start": "parcel src/*.html",
+    "dev": "parcel serve src/*.html --public-url / --dist-dir dist",
+    "build": "parcel serve src/*.html --public-url / --dist-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/JamesSwarge/nexus-polychem#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.2",
+    "intl-tel-input": "^17.0.19",
     "parcel": "^2.8.2"
   },
   "dependencies": {
