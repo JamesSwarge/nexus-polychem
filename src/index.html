@@ -8,8 +8,10 @@
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
   <link rel="stylesheet" href="scss/styles.scss">
   <script src="js/include.js"></script>
+  <script type="module" src="js/form.js"></script>
   <script type="module" src="js/main.js"></script>
 </head>
 
@@ -17,55 +19,486 @@
 
   <div w3-include-html="./header.html"></div>
 
-  <section class="bg-light">
-    <div class="container py-4 px-3 mx-auto">
-      <h1>Hello, Bootstrap and Parcel!!</h1>
-      <button class="btn btn-primary">Primary button</button>
+  <section class="bg-light common-section hero-section">
+    <div class="container">
+      <h1 class="sec-ttl">Continuing to support a <br /><span>net-zero future</span></h1>
+      <p class="sec-para">The 2023 Advancing Climate Solutions Progress Report outlines our approach to help reduce
+        greenhouse gas emissions in support of a net-zero future.</p>
+      <button class="btn btn-primary bttn bttn-hero">Read more about the strategy</button>
     </div>
   </section>
 
-  <div w3-include-html="./about.html"></div>
-
-  <section class="bg-primary">
-    <div class="container py-4 px-3 mx-auto">
-      <h1>Hello, Bootstrap and Parcel!!</h1>
-      <button class="btn btn-primary">Primary button</button>
-    </div>
-  </section>
-
-  
-
-  <section>
+  <section class="bg-light common-section brand-section">
     <div class="container">
       <div class="row">
-        <div class="col-12"><br>
-
-          <input type="number" name="number" id="phone2"><br><br>
-
-          <input type="number" name="number" id="phone"><br><br>
-
+        <div class="col-12">
+          <h3 class="sec-ttl text-dark">The brand that touches people’s lives, every day in meaningful ways.</h3>
+          <p class="sec-subttl text-dark">Nexus Polychem is the name behind some of the most famous brands worldwide. We
+            deliver
+            amazing results for these clients in every major market on the planet. Trusted for more than 25 years for
+            consistency, integrity and unsurpassed quality we produce a broad range of customized products important for
+            a
+            sustainable future.</p>
+          <div class="brand-section-img">
+            <img src="./assets/homepage/brand-section-img.png" alt="banner">
+          </div>
+          <p class="para">With our Stringent QMS we have earned these certifications to deliver the best products for
+            you</p>
+          <div class="brand-card-wrap">
+            <div class="brand-card">
+              <span class="brand-card-bg">
+                <img src="./assets/homepage/brand-card-1.png" alt="brand">
+              </span>
+              <a class="st ttl" href="#">ISO 9001-2015 <br />Certification</a>
+              <p class="p">Manufacture <br />of stabilizers</p>
+            </div>
+            <div class="brand-card">
+              <span class="brand-card-bg">
+                <img src="./assets/homepage/brand-card-2.png" alt="brand">
+              </span>
+              <a class="st ttl" href="#">ISO 9001-2015 <br />Certification</a>
+              <p class="p">Manufacture <br />of stabilizers</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="bg-dark">
-    <div class="container py-4 px-3 mx-auto">
-      <h1 class="text-light">Hello, Bootstrap and Parcel!!</h1>
-      <button class="btn btn-primary">Primary button</button>
+  <section class="bg-dark common-section products-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="sec-ttl text-light">Products</h3>
+          <p class="sec-subttl">A range of stabilizers and compounds lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+        </div>
+        <div class="col-12">
+          <div class="product-cards-carousel-wrap">
+  
+            <div class="product-cards-carousel">
+              <div class="product-card">
+                <p class="catg">PVC HEAT STABILIZERS <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
+                </p>
+                <p class="ttl">Organo Tin Stabilizers</p>
+                <div class="prod-img">
+                  <img src="./assets/homepage/prod-card-1.png" alt="img">
+                </div>
+                <p class="prod-info">
+                  White beads, 15 max acid value,<br /> 102digC +- 2digC melting point
+                  <span class="prod-info-icon prod-info-icon-normal"><img src="./assets/icons/prod-link-icon.svg"
+                      alt="i"></span>
+                  <span class="prod-info-icon prod-info-icon-active"><img src="./assets/icons/prod-title-icon-active.svg"
+                      alt="i"></span>
+                </p>
+              </div>
+              <div class="product-card">
+                <p class="catg">PVC HEAT STABILIZERS <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
+                </p>
+                <p class="ttl">Organo Tin Stabilizers</p>
+                <div class="prod-img">
+                  <img src="./assets/homepage/prod-card-1.png" alt="img">
+                </div>
+                <p class="prod-info">
+                  White beads, 15 max acid value,<br /> 102digC +- 2digC melting point
+                  <span class="prod-info-icon prod-info-icon-normal"><img src="./assets/icons/prod-link-icon.svg"
+                      alt="i"></span>
+                  <span class="prod-info-icon prod-info-icon-active"><img src="./assets/icons/prod-title-icon-active.svg"
+                      alt="i"></span>
+                </p>
+              </div>
+              <div class="product-card">
+                <p class="catg">PVC HEAT STABILIZERS <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
+                </p>
+                <p class="ttl">Organo Tin Stabilizers</p>
+                <div class="prod-img">
+                  <img src="./assets/homepage/prod-card-1.png" alt="img">
+                </div>
+                <p class="prod-info">
+                  White beads, 15 max acid value,<br /> 102digC +- 2digC melting point
+                  <span class="prod-info-icon prod-info-icon-normal"><img src="./assets/icons/prod-link-icon.svg"
+                      alt="i"></span>
+                  <span class="prod-info-icon prod-info-icon-active"><img src="./assets/icons/prod-title-icon-active.svg"
+                      alt="i"></span>
+                </p>
+              </div>
+              <div class="product-card">
+                <p class="catg">PVC HEAT STABILIZERS <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
+                </p>
+                <p class="ttl">Organo Tin Stabilizers</p>
+                <div class="prod-img">
+                  <img src="./assets/homepage/prod-card-1.png" alt="img">
+                </div>
+                <p class="prod-info">
+                  White beads, 15 max acid value,<br /> 102digC +- 2digC melting point
+                  <span class="prod-info-icon prod-info-icon-normal"><img src="./assets/icons/prod-link-icon.svg"
+                      alt="i"></span>
+                  <span class="prod-info-icon prod-info-icon-active"><img src="./assets/icons/prod-title-icon-active.svg"
+                      alt="i"></span>
+                </p>
+              </div>
+              <div class="product-card">
+                <p class="catg">PVC HEAT STABILIZERS <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
+                </p>
+                <p class="ttl">Organo Tin Stabilizers</p>
+                <div class="prod-img">
+                  <img src="./assets/homepage/prod-card-1.png" alt="img">
+                </div>
+                <p class="prod-info">
+                  White beads, 15 max acid value,<br /> 102digC +- 2digC melting point
+                  <span class="prod-info-icon prod-info-icon-normal"><img src="./assets/icons/prod-link-icon.svg"
+                      alt="i"></span>
+                  <span class="prod-info-icon prod-info-icon-active"><img src="./assets/icons/prod-title-icon-active.svg"
+                      alt="i"></span>
+                </p>
+              </div>
+              <div class="product-card">
+                <p class="catg">PVC HEAT STABILIZERS <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
+                </p>
+                <p class="ttl">Organo Tin Stabilizers</p>
+                <div class="prod-img">
+                  <img src="./assets/homepage/prod-card-1.png" alt="img">
+                </div>
+                <p class="prod-info">
+                  White beads, 15 max acid value,<br /> 102digC +- 2digC melting point
+                  <span class="prod-info-icon prod-info-icon-normal"><img src="./assets/icons/prod-link-icon.svg"
+                      alt="i"></span>
+                  <span class="prod-info-icon prod-info-icon-active"><img src="./assets/icons/prod-title-icon-active.svg"
+                      alt="i"></span>
+                </p>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section class="common-section formula-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="sec-ttl text-dark">A Winning Formula</h3>
+        </div>
+        <div class="col-md-6">
+          <div class="formula-section-img">
+            <img src="./assets/homepage/formula-section-img.png" alt="img">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="formula-cards-wrap">
+            <div class="formula-card">
+              <div class="formula-card-icon">
+                <img src="./assets/homepage/formula-card-icon.png" alt="ic">
+              </div>
+              <p class="ttl">Experience</p>
+              <p class="p">Motorcycle evalutaed by experts with Quality assurance & Certicifation</p>
+            </div>
+            <div class="formula-card">
+              <div class="formula-card-icon">
+                <img src="./assets/homepage/formula-card-icon.png" alt="ic">
+              </div>
+              <p class="ttl">Flexibility</p>
+              <p class="p">Warranty that covers everything with Providing 24*7 assistance </p>
+            </div>
+            <div class="formula-card">
+              <div class="formula-card-icon">
+                <img src="./assets/homepage/formula-card-icon.png" alt="ic">
+              </div>
+              <p class="ttl">Service</p>
+              <p class="p">Motorcycles at RE are all assured and Insured by RE</p>
+            </div>
+            <div class="formula-card">
+              <div class="formula-card-icon">
+                <img src="./assets/homepage/formula-card-icon.png" alt="ic">
+              </div>
+              <p class="ttl">Innovation</p>
+              <p class="p">Motorcycles at RE can be sent back at anytime!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light common-section applications-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="sec-ttl text-dark">Applications</h3>
+        </div>
+        <div class="col-12">
+          <div class="applications-cards-wrap">
+            <div class="applications-cards-flex">
+  
+              <div class="applications-card st">
+                <span class="applications-card-img">
+                  <img src="./assets/homepage/application-card-1.png" alt="img">
+                </span>
+                <div class="applications-card-box">
+                  <p class="applications-card-ttl">PVC Pipes & Fittings</p>
+                  <p class="p">Lorem ipsum dolor sit amet, consect adipiscing unde elit.</p>
+                </div>
+                <a href="#" class="lnk st">Learn more</a>
+              </div>
+  
+              <div class="applications-card st">
+                <span class="applications-card-img">
+                  <img src="./assets/homepage/application-card-2.png" alt="img">
+                </span>
+                <div class="applications-card-box">
+                  <p class="applications-card-ttl">PVC calendering, soft  & shrink Films</p>
+                  <p class="p">Lorem ipsum dolor sit amet, consect adipiscing unde elit.</p>
+                </div>
+                <a href="#" class="lnk st">Learn more</a>
+              </div>
+  
+              <div class="applications-card st">
+                <span class="applications-card-img">
+                  <img src="./assets/homepage/application-card-3.png" alt="img">
+                </span>
+                <div class="applications-card-box">
+                  <p class="applications-card-ttl">Suction hose & flexible tubing</p>
+                  <p class="p">Lorem ipsum dolor sit amet, consect adipiscing unde elit.</p>
+                </div>
+                <a href="#" class="lnk st">Learn more</a>
+              </div>
+  
+              <div class="applications-card st">
+                <span class="applications-card-img">
+                  <img src="./assets/homepage/application-card-4.png" alt="img">
+                </span>
+                <div class="applications-card-box">
+                  <p class="applications-card-ttl">PVC footwear & leather</p>
+                  <p class="p">Lorem ipsum dolor sit amet, consect adipiscing unde elit.</p>
+                </div>
+                <a href="#" class="lnk st">Learn more</a>
+              </div>
+
+              <div class="applications-card st">
+                <span class="applications-card-img">
+                  <img src="./assets/homepage/application-card-5.png" alt="img">
+                </span>
+                <div class="applications-card-box">
+                  <p class="applications-card-ttl">PVC wires & Cables</p>
+                  <p class="p">Lorem ipsum dolor sit amet, consect adipiscing unde elit.</p>
+                </div>
+                <a href="#" class="lnk st">Learn more</a>
+              </div>
+
+              <div class="applications-card st">
+                <span class="applications-card-img">
+                  <img src="./assets/homepage/application-card-6.png" alt="img">
+                </span>
+                <div class="applications-card-box">
+                  <p class="applications-card-ttl">Anti-fungal & Pharma intermediate</p>
+                  <p class="p">Lorem ipsum dolor sit amet, consect adipiscing unde elit.</p>
+                </div>
+                <a href="#" class="lnk st">Learn more</a>
+              </div>
+
+              <div class="applications-card st">
+                <span class="applications-card-img">
+                  <img src="./assets/homepage/application-card-7.png" alt="img">
+                </span>
+                <div class="applications-card-box">
+                  <p class="applications-card-ttl">xlpe & Polymer Catalyst</p>
+                  <p class="p">Lorem ipsum dolor sit amet, consect adipiscing unde elit.</p>
+                </div>
+                <a href="#" class="lnk st">Learn more</a>
+              </div>
+
+              <div class="applications-card st">
+                <span class="applications-card-img">
+                  <img src="./assets/homepage/application-card-8.png" alt="img">
+                </span>
+                <div class="applications-card-box">
+                  <p class="applications-card-ttl">Food Grade</p>
+                  <p class="p">Lorem ipsum dolor sit amet, consect adipiscing unde elit.</p>
+                </div>
+                <a href="#" class="lnk st">Learn more</a>
+              </div>
+
+              <div class="applications-card st">
+                <span class="applications-card-img">
+                  <img src="./assets/homepage/application-card-9.png" alt="img">
+                </span>
+                <div class="applications-card-box">
+                  <p class="applications-card-ttl">Medical Application</p>
+                  <p class="p">Lorem ipsum dolor sit amet, consect adipiscing unde elit.</p>
+                </div>
+                <a href="#" class="lnk st">Learn more</a>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark common-section quote-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="sec-ttl text-light">Get instant quote</h3>
+          <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          <div class="quote-form-wrap">
+            <form action="" class="row quote-form">
+              <div class="col">
+                <!-- <label for="quote_name" class="visually-hidden">Name</label> -->
+                <input type="text" class="form-control custom-input" id="quote_name" placeholder="Name">
+              </div>
+              <div class="col">
+                <!-- <label for="quote_mobile" class="visually-hidden">Password</label> -->
+                <input type="text" class="form-control custom-input" id="quote_mobile" placeholder="Mobile">
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary submit-bttn">Get In Touch</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light common-section ordersDelivered-section" id="ordersDelivered-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="sec-ttl">Orders delivered</h3>
+          <span class="ani-number value" id="counter" js="34440">0</span>
+          <div class="values-blk-wrapper">
+            <div class="values-blk">
+              <p class="value-ttl">Working force</p>
+              <p class="value-number">3202<sup>+</sup></p>
+            </div>
+            <div class="values-blk">
+              <p class="value-ttl">Branches</p>
+              <p class="value-number">117</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="common-section specific-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-auto">
+          <h3 class="sec-ttl text-dark">Anything specific?</h3>
+        </div>
+        <div class="col">
+          <div class="specific-form-wrap">
+            <form action="" class="specific-form">
+              <div class="row">
+                <div class="col">
+                  <textarea class="form-control custom-input2" placeholder="Describe your requirement in detail here..." id=""
+                    rows="3"></textarea>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <input type="text" class="form-control custom-input2" id="anything_name" placeholder="Rohit Sharma">
+                </div>
+                <div class="col">
+                  <input type="tel" class="form-control custom-input2 phone" id="anything_mobile" placeholder="9876543210">
+                  <span id="valid-msg" style="display: none;">✓ Valid</span>
+                  <span id="error-msg" style="display: none;"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-auto">
+                  <button type="submit" class="btn btn-primary submit-bttn">Submit</button>
+                </div>
+              </div>              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <div w3-include-html="./footer.html"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+
   <script>
     includeHTML();
 
-    const input = document.querySelector("#phone");
-    
+    // counter
+    const counters = document.querySelectorAll('.value');
+    const speed = 200;
+    counters.forEach(counter => {
+      const animate = () => {
+        const value = +counter.getAttribute('js');
+        const data = +counter.innerText;
+        const time = value / speed;
+        if (data < value) {
+          counter.innerText = Math.ceil(data + time);
+          setTimeout(animate, 1);
+        } else {
+          counter.innerText = value;
+        }
+      }
+      animate();
+    });
   </script>
+
+  <script>
+    // // Get the an HTML element
+    // var element = document.getElementById('ordersDelivered-section');
+    // console.log('element', element);
+    // window.addEventListener('scroll', function (event) {
+    //   if (isInViewport(element)) {
+    //     // update the element display
+    //   }
+    // }, false);
+    // function isInViewport(element) {
+    //   // Get the bounding client rectangle position in the viewport
+    //   var bounding = element.getBoundingClientRect();
+    //   console.log('bounding', bounding);
+    //   if (
+    //     bounding.top >= 0 &&
+    //     bounding.left >= 700
+    //   ) {
+    //     console.log('In the viewport! :)');
+    //     return true;
+    //   } else {
+    //     console.log('Not in the viewport. :(');
+    //     return false;
+    //   }
+    // }
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      // slick carousel
+      $('.product-cards-carousel').slick({
+        autoplay: true,
+        dots: false,
+        arrows: false,
+        centerMode: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3.5,
+      });
+
+      // int-tel-input     
+
+    });
+  </script>
+
 </body>
 
 </html>

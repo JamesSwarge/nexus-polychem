@@ -24,7 +24,11 @@ $theme-colors: (
 
 // Import all of Bootstrap's CSS
 @import "../../node_modules/intl-tel-input/build/css/intlTelInput.min.css";
+@import "../../node_modules//slick-carousel/slick/slick.css";
+@import "../../node_modules//slick-carousel/slick/slick-theme.css";
+
 @import "~bootstrap/scss/bootstrap";
 
-@import './main';
 @import './header';
+@import './cards';
+@import './main';

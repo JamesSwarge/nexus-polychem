@@ -22,7 +22,8 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.2",
     "intl-tel-input": "^17.0.19",
-    "parcel": "^2.8.2"
+    "parcel": "^2.8.2",
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
