@@ -2,11 +2,10 @@
   "name": "nexus-polychem",
   "version": "1.0.0",
   "description": "\"# nexus-polychem\"",
-  "main": "index.js",
   "scripts": {
     "start": "parcel src/*.html",
     "dev": "parcel serve src/*.html --public-url / --dist-dir dist",
-    "build": "parcel serve src/*.html --public-url / --dist-dir dist",
+    "prod": "parcel build src/*.html --public-url / --dist-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
