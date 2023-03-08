@@ -1,7 +1,42 @@
 @import './colors';
 
+.scroll-down {
+  .header-nav {
+    transform: translateY(0px);
+    background: $white !important;
+    .navbar-nav .nav-item .nav-link {
+      color: $dark1 !important;
+    }
+  }
+}
+.scroll-up {
+  .header-nav {
+    transform: translateY(80px);
+    background: $white !important;
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+    .navbar-nav .nav-item .nav-link {
+      color: $dark1 !important;
+    }
+  }
+}
+
+.contact-page, .homepage {
+  .header-nav .navbar-nav .nav-item .nav-link {
+    color: $white;
+  }
+}
+
 .header-nav {
   height: 80px;
+  max-width: 100vw;
+  position: fixed;
+  top: -80px;
+  left: 0;
+  background: none !important;
+  z-index: 9999;
+  width: 100vw;
+  transition: all .3s ease-in-out;
+  transform: translateY(80px);
   .navbar-brand {
     max-height: 50px;
     max-width: 180px;

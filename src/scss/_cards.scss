@@ -173,10 +173,13 @@
   align-content: center;
   align-items: flex-start;
   padding: 36px 36px;
-  border: 1px solid #8A8C8F;
+  // border: 1px solid #8A8C8F;
+  border: 1px solid #f2f9fc;
   min-height: 324px;
   background-color: $white;
   max-width: 492px;
+  text-decoration: none;
+  cursor: pointer;
   .brand-card-bg {
     position: absolute;
     height: 136px;
@@ -203,7 +206,19 @@
     color: $dark1;
     text-decoration: none;
     width: 100%;
-    &:hover, &:focus, &:active {
+  }
+  .p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: $dark1;
+    margin-bottom: 0;
+    max-width: 230px;
+  }
+  &:hover, &:focus, &:active {
+    background-color: $light4;
+    text-decoration: none;
+    .ttl {
       color: $mainText;
       &::before {
         position: absolute;
@@ -217,16 +232,6 @@
         right: -6px;
       }
     }
-  }
-  .p {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 32px;
-    color: $dark1;
-    margin-bottom: 0;
-  }
-  &:hover, &:focus, &:active {
-    background-color: $light4;
   }
 }
 
@@ -258,7 +263,7 @@
     margin-bottom: 0;
   }
   .p {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: $dark1;
