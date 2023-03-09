@@ -25,7 +25,7 @@ $(document).ready(function () {
   //owl carousel
   $('.product-cards-carousel').owlCarousel({
     autoplay: true,
-    autoplayTimeout: 360000,
+    autoplayTimeout: 3600,
     autoplayHoverPause: false,
     mouseDrag: true,
     loop: true,
@@ -47,13 +47,31 @@ $(document).ready(function () {
         items: 3.7
       }
     }
+  });
+  $('.other-product-cards-carousel').owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 3600,
+    autoplayHoverPause: false,
+    mouseDrag: true,
+    loop: true,
+    margin: 10, 
+    nav: false,
+    dots: false,
+    margin: 16,
+    items: 3.5,
+    responsive: {
+      0: {
+        items: 1.3,
+        dots: true,
+      },
+      576: {
+        items: 3
+      },
+      1000: {
+        items: 3.7
+      }
+    }
   })
-
-
-  //count animation
-  // $('.ani-number').rCounter({
-  //   duration: 36
-  // });
 
 
   //header mobile
@@ -90,7 +108,7 @@ $(document).ready(function () {
       body.classList.remove("scroll-up");
       setTimeout(function(){
         body.classList.add("scroll-down")
-      }, 600);
+      }, 100);
     } else if (
       currentScroll < lastScroll &&
       body.classList.contains("scroll-down")
@@ -100,6 +118,12 @@ $(document).ready(function () {
     }
     lastScroll = currentScroll;
   });
+
+
+  // // count animation
+  // $('.ani-number').rCounter({
+  //   duration: 36
+  // });
 
 });
 

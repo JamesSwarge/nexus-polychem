@@ -26,6 +26,12 @@
   }
 }
 
+.prod-page {
+  .header-nav {
+    background: $white !important;
+  }
+}
+
 .header-nav {
   height: 80px;
   max-width: 100vw;

@@ -59,7 +59,7 @@
     color: $dark1;
     .prod-info-icon {
       position: absolute;
-      top: 10px;
+      top: -2px;
       left: auto;
       right: 0;
       &.prod-info-icon-normal {
@@ -180,6 +180,9 @@
   max-width: 492px;
   text-decoration: none;
   cursor: pointer;
+
+  background-color: $light4;
+  text-decoration: none;
   .brand-card-bg {
     position: absolute;
     height: 136px;
@@ -206,6 +209,19 @@
     color: $dark1;
     text-decoration: none;
     width: 100%;
+
+    color: $mainText;
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      background: url('../assets/icons/prod-title-icon-active.svg') no-repeat center;
+      height: 48px;
+      width: 48px;
+      top: 0;
+      left: auto;
+      right: -6px;
+    }
   }
   .p {
     font-weight: 500;
@@ -313,7 +329,7 @@
       margin: 15px auto;
     }
     .prod-info {
-      margin-top: 20px;
+      margin-top: 48px;
       font-size: 11px;
       line-height: 17px;
     }
