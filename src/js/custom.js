@@ -15,12 +15,12 @@ $(document).ready(function () {
     $(this).next().find(".level3").height(val);
   });
 
-  $(".level1").click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    console.log('e', e);
-    console.log('e', e.delegateTarget.nextElementSibling);
-  })
+  // $(".level1").click(function (e) {
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   console.log('e', e);
+  //   console.log('e', e.delegateTarget.nextElementSibling);
+  // })
 
   //owl carousel
   $('.product-cards-carousel').owlCarousel({
