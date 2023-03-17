@@ -402,33 +402,9 @@
   <script type="text/javascript" src="./js/custom.js"></script>
 
   <script>
-    // $(document).ready(function () {
-    //   //load more cols
-    //   $(".content").slice(0, 3).show();
-    //   $(".loadmore-bttn").on("click", function (e) {
-    //     // alert('clicked');
-    //     e.preventDefault();
-    //     $(".content:hidden").slice(0, 3).slideDown();
-    //     if ($(".content:hidden").length == 0) {
-    //       $(".loadmore-bttn").text("No More Content").addClass("noContent");
-    //     }
-    //   });
-    // });
-
-    // $(window).on('resize', function () {
-    //   var win = $(this);
-    //   if (win.width() >= 768) {
-    //     alert('3')
-    //   } else if (win.height() < 768) {
-    //     alert('2')
-    //   } else if (win.width() < 576) {
-    //     alert('1')
-    //   }
-    // });
-
     $(document).ready(function () {
-      function responsivescrn(width2) {
-        if (width2.matches) {
+      function responsivescrn(maxWidth) {
+        if (maxWidth.matches) {
           // slice 2 cols
           $(".content").slice(0, 2).show();
           $(".loadmore-bttn").on("click", function (e) {
@@ -450,12 +426,10 @@
           });
         }
       }
-      var winMaxWidth2 = window.matchMedia("(max-width: 767px)");
-      responsivescrn(winMaxWidth2);
-      winMaxWidth2.addListener(responsivescrn);
+      var winMaxWidth = window.matchMedia("(max-width: 767px)");
+      responsivescrn(winMaxWidth);
+      winMaxWidth.addListener(responsivescrn);
     });
-    
-
   </script>
 
 </body>

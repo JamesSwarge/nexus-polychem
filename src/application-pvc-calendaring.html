@@ -99,7 +99,7 @@
         </div>
       </div>
       <div class="row" style="max-width: 1001px">
-        <div class="col-md-4 col-12 content">
+        <div class="col-md-4 col-sm-6 col-6 content">
           <a class="product-card st" href="./prod-organotin-stabilzer.html">
             <p class="catg">PVC HEAT STABILIZERS <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
@@ -116,7 +116,7 @@
             </p>
           </a>
         </div>
-        <div class="col-md-4 col-12 content">
+        <div class="col-md-4 col-sm-6 col-6 content">
           <a class="product-card st" href="./prod-organotin-stabilzer.html">
             <p class="catg">Specality additives <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
@@ -133,7 +133,7 @@
             </p>
           </a>
         </div>
-        <div class="col-md-4 col-12 content">
+        <div class="col-md-4 col-sm-6 col-6 content">
           <a class="product-card st" href="./prod-additives.html">
             <p class="catg">PVC Heat stabilizer<span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
@@ -150,7 +150,7 @@
             </p>
           </a>
         </div>
-        <div class="col-md-4 col-12 content">
+        <div class="col-md-4 col-sm-6 col-6 content">
           <a class="product-card st" href="./prod-lubricants.html">
             <p class="catg">PVC Heat stabilizer<span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
@@ -285,7 +285,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row mt-md-4 mt-3">
+              <div class="row mt-md-4 mt-0">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
                     <input type="text" class="form-control custom-input2" id="anything_company" placeholder="Company"
@@ -309,7 +309,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row mt-md-4 mt-3">
+              <div class="row mt-md-4 mt-0">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
                     <input type="email" class="form-control custom-input2" id="anything_email" placeholder="Email ID"
@@ -363,24 +363,33 @@
 
   <script>
     $(document).ready(function () {
-      //load more cols
-      $(".content").slice(0, 3).show();
-      $(".loadmore-bttn").on("click", function (e) {
-        // alert('clicked');
-        e.preventDefault();
-        $(".content:hidden").slice(0, 3).slideDown();
-        if ($(".content:hidden").length == 0) {
-          $(".loadmore-bttn").text("No More Content").addClass("noContent");
+      function responsivescrn(maxWidth) {
+        if (maxWidth.matches) {
+          // slice 2 cols
+          $(".content").slice(0, 2).show();
+          $(".loadmore-bttn").on("click", function (e) {
+            e.preventDefault();
+            $(".content:hidden").slice(0, 2).slideDown();
+            if ($(".content:hidden").length == 0) {
+              $(".loadmore-bttn").text("No More Content").addClass("noContent");
+            }
+          });
+        } else {
+          // slice 3 cols
+          $(".content").slice(0, 3).show();
+          $(".loadmore-bttn").on("click", function (e) {
+            e.preventDefault();
+            $(".content:hidden").slice(0, 3).slideDown();
+            if ($(".content:hidden").length == 0) {
+              $(".loadmore-bttn").text("No More Content").addClass("noContent");
+            }
+          });
         }
-      });
+      }
+      var winMaxWidth = window.matchMedia("(max-width: 767px)");
+      responsivescrn(winMaxWidth);
+      winMaxWidth.addListener(responsivescrn);
     });
-
-    $(window).on('resize', function () {
-      var win = $(this);
-      if (win.height() >= 820) { }
-      if (win.width() >= 1280) { }
-    });
-
   </script>
 
 </body>
