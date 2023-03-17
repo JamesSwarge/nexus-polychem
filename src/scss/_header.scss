@@ -264,42 +264,96 @@
     margin-right: 0.7rem;
     margin-bottom: .5rem;
   }
+  .contact-page, .homepage {
+    .header-nav .navbar-nav .nav-item .nav-link {
+      color: $dark1;
+    }
+  }
   .header-nav {
+    height: auto;
+    background: $white !important;
+    padding: 5px 40px;
+    #main_nav {
+      margin: 10px 0;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          margin-left: 0;
+          padding: 7px 15px;
+          &::after {
+            display: none !important;
+          }
+          &.show {
+            background-color: $light4;
+          }
+        }
+      }
+    }
     .dropdown {
       .dropdown-menu {
+        position: relative;
+        padding: 10px 20px 20px;
+        max-width: calc(100% - 4px);
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+        .level1 {
+          border-bottom: 1px solid $light4;
+          span {
+            background: url('../assets/icons/prod-title-icon-active.svg') no-repeat center;
+            right: 15px;
+          }
+        }
         &.submenu.level2 {
           display: block !important;
           min-height: unset !important;
+          position: static;
+          box-shadow: none;
+          transform: none;
+          margin-bottom: 0;
+          max-width: 100%;
+          padding: 0;
+          border-radius: 4px;
+          li {
+            padding: 0;
+            .dropdown-item {
+              font-size: 9px;
+              border-bottom: 1px solid #e1f0f7;
+              background-color: $light4;
+              padding: 5px 15px;
+              span {
+                background: url('../assets/icons/prod-title-icon-active.svg') no-repeat center;
+                right: 15px;
+              }
+            }
+            &:last-child {
+              .dropdown-item {
+                border-bottom: 0;
+              }
+            }
+          }
         }  
         .dropdown-item {
           font-size: 11px;
-          height: 21px;
+          height: auto;
           line-height: 20px;
         }
         > li {
-          .submenu {
-            li {
-              padding: 10px 0 4px;
-              .dropdown-item {
-                font-size: 9px;
-              }
-            }
+          padding: 0;
+          .dropdown-item {
+            padding: 5px 0;
+          }
+          &:has(a) {
+            background: red;
           }
         }
       }
     }
   }
 }
-
-// .dropdown-menu {
-//   > li {
-//     .submenu {
-//       li {
-//         padding-right: 0;
-//       }
-//     }
-//   }
-// }
 
 @media (max-width: 767px) {
   
@@ -319,57 +373,28 @@
     .custom-toggler {
       margin-right: 15px;
     }
-    .dropdown {
-      .dropdown-menu {
-        padding-top: 0;
-        box-shadow: none;
-        > li {
-          padding: 10px 15px;
-          .submenu {
-            position: static;
-            box-shadow: none;
-            padding: 0 0 0 10px;
-            li {
-              padding-right: 0;
-            }
-          }
-          .submenu-left{ 
-            position: static;
-          }
-        }
-        .dropdown-item {
-          letter-spacing: 0.2em;
-          padding: 0;
-          span {
-            background-size: 70%;
-          }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          font-size: 10px;
+          line-height: 16px;
         }
       }
     }
-    .navbar-nav {
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-top: 10px;
-      .nav-item {
-        .nav-link {
-          padding: 10px 15px;
-          margin: 0;
-          letter-spacing: 0.2em;
-          &::after {
-            display: none;
-          }
-          &:hover, &:focus, &:active, &.active {
-            background-color: $light4;
-            &::after {
-              display: none;
-            }
-          }
+    .dropdown {
+      .dropdown-menu {
+        max-width: calc(100% - 30px);
+        padding: 5px 15px 15px;
+        margin-bottom: 5px;
+        .dropdown-item {
+          font-size: 9px;
+          line-height: 18px;
         }
       }
     }
     #getInstantQuote {
-      letter-spacing: .2em;
-      font-size: 12px;
+      letter-spacing: 0.1em;
+      font-size: 10px;
       font-weight: 500;
       &::after {
         display: none;

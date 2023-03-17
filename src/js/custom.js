@@ -1,7 +1,6 @@
 includeHTML();
 
 $(document).ready(function () {  
-
   //header
   $("#getInstantQuote").click(function() {
     // alert("hi...");
@@ -50,7 +49,7 @@ $(document).ready(function () {
   });
   $('.other-product-cards-carousel').owlCarousel({
     autoplay: true,
-    autoplayTimeout: 3600,
+    autoplayTimeout: 360000,
     autoplayHoverPause: false,
     mouseDrag: true,
     loop: true,
@@ -65,6 +64,9 @@ $(document).ready(function () {
         dots: true,
       },
       576: {
+        items: 2.5
+      },
+      768: {
         items: 3
       },
       1000: {
@@ -96,52 +98,62 @@ $(document).ready(function () {
   //   }
   // });
 
-  const body = document.body;
-  let lastScroll = 200;
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
-      body.classList.remove("scroll-up");
-      return;
+  function responsive(maxWidth) {
+    if (maxWidth.matches) {
+      // alert('1')
+      const body = document.body;
+      let lastScroll = 200;
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll <= 0) {
+          body.classList.remove("scroll-up");
+          return;
+        }
+        if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+          body.classList.remove("scroll-up");
+          if ($("#custom-toggler-bttn").attr('aria-expanded') === 'true' ) {
+            $("#custom-toggler-bttn:not(.collapsed)").trigger("click");
+          }
+          setTimeout(function(){
+            body.classList.add("scroll-down")
+          }, 100);
+        } else if (
+          currentScroll < lastScroll &&
+          body.classList.contains("scroll-down")
+        ) {
+          body.classList.remove("scroll-down");
+          body.classList.add("scroll-up");
+        }
+        lastScroll = currentScroll;
+      });  
+    } else {
+      // alert('2')
+      const body = document.body;
+      let lastScroll = 200;
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll <= 0) {
+          body.classList.remove("scroll-up");
+          return;
+        }
+        if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+          body.classList.remove("scroll-up");
+          setTimeout(function(){
+            body.classList.add("scroll-down")
+          }, 100);
+        } else if (
+          currentScroll < lastScroll &&
+          body.classList.contains("scroll-down")
+        ) {
+          body.classList.remove("scroll-down");
+          body.classList.add("scroll-up");
+        }
+        lastScroll = currentScroll;
+      });
     }
-    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-      body.classList.remove("scroll-up");
-      setTimeout(function(){
-        body.classList.add("scroll-down")
-      }, 100);
-    } else if (
-      currentScroll < lastScroll &&
-      body.classList.contains("scroll-down")
-    ) {
-      body.classList.remove("scroll-down");
-      body.classList.add("scroll-up");
-    }
-    lastScroll = currentScroll;
-  });
-
-
-  // // count animation
-  // $('.ani-number').rCounter({
-  //   duration: 36
-  // });
+  }
+  var maxWidth = window.matchMedia("(max-width: 991px)");
+  responsive(maxWidth);
+  maxWidth.addListener(responsive); 
 
 });
-
-// const header = document.querySelector(".navbar")
-// const firstSection = document.querySelector(".first-sec")
-
-// const sectionOneOptions = {
-//   rootMargin: "-200px 0px 0px 0px"
-// };
-
-// const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {
-//   entries.forEach(entry => {
-//     if (!entry.isIntersecting) {
-//       header.classList.add("nav-scrolled");
-//     } else {
-//       header.classList.remove("nav-scrolled");
-//     }
-//   });
-// }, sectionOneOptions);
-
-// sectionOneObserver.observe(firstSection);
