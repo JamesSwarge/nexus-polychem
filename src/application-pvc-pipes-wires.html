@@ -104,8 +104,8 @@
         </div>
       </div>
       <div class="row" style="max-width: 1001px">
-        <div class="col-md-4 col-12 content">
-          <a class="product-card st" href="">
+        <div class="col-md-4 col-sm-6 col-6 content">
+          <a class="product-card st" href="./prod-lead-based-stabilizer.html">
             <p class="catg">PVC HEAT STABILIZERS <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
             <p class="ttl">Lead one pack</p>
@@ -121,8 +121,8 @@
             </p>
           </a>
         </div>
-        <div class="col-md-4 col-12 content">
-          <a class="product-card st" href="">
+        <div class="col-md-4 col-sm-6 col-6 content">
+          <a class="product-card st" href="./prod-lubricants.html">
             <p class="catg">Specality additives <span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
             <p class="ttl">Oxidized PE Wax</p>
@@ -138,8 +138,8 @@
             </p>
           </a>
         </div>
-        <div class="col-md-4 col-12 content">
-          <a class="product-card st" href="">
+        <div class="col-md-4 col-sm-6 col-6 content">
+          <a class="product-card st" href="./prod-antimony-stabilizer.html">
             <p class="catg">PVC Heat stabilizer<span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
             <p class="ttl">Antimony stabilizer</p>
@@ -156,11 +156,11 @@
           </a>
         </div>
 
-        <div class="col-md-4 col-12 content">
-          <a class="product-card st" href="">
+        <div class="col-md-4 col-sm-6 col-6 content">
+          <a class="product-card st" href="./prod-organotin-stabilzer.html">
             <p class="catg">Catalysts<span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
-            <p class="ttl">Productsmethyl tin</p>
+            <p class="ttl">Methyl tin</p>
             <div class="prod-img">
               <img src="./assets/application-details/application-card-4.png" alt="img">
             </div>
@@ -173,8 +173,8 @@
             </p>
           </a>
         </div>
-        <div class="col-md-4 col-12 content">
-          <a class="product-card st" href="">
+        <div class="col-md-4 col-sm-6 col-6 content">
+          <a class="product-card st" href="./prod-organotin-stabilzer.html">
             <p class="catg">PVC Heat stabilizer<span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
             <p class="ttl">Butyl tin</p>
@@ -190,8 +190,8 @@
             </p>
           </a>
         </div>
-        <div class="col-md-4 col-12 content">
-          <a class="product-card st" href="">
+        <div class="col-md-4 col-sm-6 col-6 content">
+          <a class="product-card st" href="./prod-lubricants.html">
             <p class="catg">PVC Heat stabilizer<span><img src="./assets/icons/prod-title-icon.svg" alt="i"></span>
             </p>
             <p class="ttl">Waxes</p>
@@ -325,7 +325,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row mt-md-4 mt-3">
+              <div class="row mt-md-4 mt-0">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
                     <input type="text" class="form-control custom-input2" id="anything_company" placeholder="Company"
@@ -349,7 +349,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row mt-md-4 mt-3">
+              <div class="row mt-md-4 mt-0">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
                     <input type="email" class="form-control custom-input2" id="anything_email" placeholder="Email ID"
@@ -402,24 +402,59 @@
   <script type="text/javascript" src="./js/custom.js"></script>
 
   <script>
-    $(document).ready(function () {
-      //load more cols
-      $(".content").slice(0, 3).show();
-      $(".loadmore-bttn").on("click", function (e) {
-        // alert('clicked');
-        e.preventDefault();
-        $(".content:hidden").slice(0, 3).slideDown();
-        if ($(".content:hidden").length == 0) {
-          $(".loadmore-bttn").text("No More Content").addClass("noContent");
-        }
-      });
-    });
+    // $(document).ready(function () {
+    //   //load more cols
+    //   $(".content").slice(0, 3).show();
+    //   $(".loadmore-bttn").on("click", function (e) {
+    //     // alert('clicked');
+    //     e.preventDefault();
+    //     $(".content:hidden").slice(0, 3).slideDown();
+    //     if ($(".content:hidden").length == 0) {
+    //       $(".loadmore-bttn").text("No More Content").addClass("noContent");
+    //     }
+    //   });
+    // });
 
-    $(window).on('resize', function () {
-      var win = $(this);
-      if (win.height() >= 820) { }
-      if (win.width() >= 1280) { }
+    // $(window).on('resize', function () {
+    //   var win = $(this);
+    //   if (win.width() >= 768) {
+    //     alert('3')
+    //   } else if (win.height() < 768) {
+    //     alert('2')
+    //   } else if (win.width() < 576) {
+    //     alert('1')
+    //   }
+    // });
+
+    $(document).ready(function () {
+      function responsivescrn(width2) {
+        if (width2.matches) {
+          // slice 2 cols
+          $(".content").slice(0, 2).show();
+          $(".loadmore-bttn").on("click", function (e) {
+            e.preventDefault();
+            $(".content:hidden").slice(0, 2).slideDown();
+            if ($(".content:hidden").length == 0) {
+              $(".loadmore-bttn").text("No More Content").addClass("noContent");
+            }
+          });
+        } else {
+          // slice 3 cols
+          $(".content").slice(0, 3).show();
+          $(".loadmore-bttn").on("click", function (e) {
+            e.preventDefault();
+            $(".content:hidden").slice(0, 3).slideDown();
+            if ($(".content:hidden").length == 0) {
+              $(".loadmore-bttn").text("No More Content").addClass("noContent");
+            }
+          });
+        }
+      }
+      var winMaxWidth2 = window.matchMedia("(max-width: 767px)");
+      responsivescrn(winMaxWidth2);
+      winMaxWidth2.addListener(responsivescrn);
     });
+    
 
   </script>
 
