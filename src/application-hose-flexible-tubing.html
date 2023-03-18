@@ -219,18 +219,19 @@
         </div>
         <div class="col">
           <div class="specific-form-wrap">
-            <form action="#" class="needs-validation specific-form" novalidate>
+            <form action="form.php" method="POST" class="needs-validation specific-form" novalidate>
               <div class="row">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <input type="text" class="form-control custom-input2" id="anything_name" placeholder="Rohit Sharma"
+                    <input type="text" class="form-control custom-input2" name="aname" id="anything_name" placeholder="Rohit Sharma"
                       required>
                   </div>
                 </div>
                 <div class="col-md-6 col-12">
                   <div class="form-group">
                     <input type="tel" class="form-control custom-input2 phone tel-input" id="anything_mobile"
-                      placeholder="9876543210" required name="phone" pattern="^[0-9]+$">
+                      placeholder="9876543210" required name="aphone" pattern="^[0-9]+$">
+                    <input class="phone2" type="hidden" id="phone2" name="bphone"/>
                     <div class="invalid-feedback"></div>
                   </div>
                 </div>
@@ -238,15 +239,15 @@
               <div class="row mt-md-4 mt-0">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <input type="text" class="form-control custom-input2" id="anything_company" placeholder="Company"
+                    <input type="text" class="form-control custom-input2" name="acompany" id="anything_company" placeholder="Company"
                       required>
                   </div>
                 </div>
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <select class="form-control custom-input2 custom-select2" id="anything_selectProduct" required>
-                      <option value="default" selected disabled>Select Product</option>
-                      <option value="prod_organotin_stabilzer">Organotin Stabilzer</option>
+                    <select class="form-control custom-input2 custom-select2" id="anything_selectProduct" name="aproduct" required>
+                      <option value="default" disabled>Select Product</option>
+                      <option value="prod_organotin_stabilzer" selected>Organotin Stabilzer</option>
                       <option value="prod_antimony_stablizer">Antimony Stablizers</option>
                       <option value="prod_leadbased_stabilizer">Lead Based Stabilizer</option>
                       <option value="prod_calcium_zinc_stabilizer">Calcium Zinc Stabilizer</option>
@@ -262,13 +263,13 @@
               <div class="row mt-md-4 mt-0">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <input type="email" class="form-control custom-input2" id="anything_email" placeholder="Email ID"
+                    <input type="email" class="form-control custom-input2" name="aemail" id="anything_email" placeholder="Email ID"
                       required>
                   </div>
                 </div>
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <textarea class="form-control custom-input2" placeholder="Describe your requirement..."
+                    <textarea class="form-control custom-input2" name="arequirement" placeholder="Describe your requirement..."
                     id="" rows="2" required></textarea>
                   </div>
                 </div>
