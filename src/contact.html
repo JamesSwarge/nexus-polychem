@@ -78,28 +78,31 @@
         <div class="col-12">
           <div class="form-wrap contact-form-wrap">
             <form action="contact.php" method="POST" id="contact-form" class="needs-validation contact-form" novalidate>
-              
-              <div class="row mt-4">
-                <div class="col">
+
+              <div class="row mt-lg-4 mt-0">
+                <div class="col-sm-6">
                   <div class="form-group"> 
                     <input type="text" class="form-control custom-input" id="contact_name" name="contact_name" placeholder="Your name" required>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="form-group"> 
-                    <input type="tel" class="form-control custom-input phone tel-input" id="contact_mobile" name="contact_mobile" placeholder="Your number" required name="phone" pattern="[7-9]{1}[0-9]{9}">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input type="tel" class="form-control custom-input phone tel-input" id="anything_mobile"
+                      placeholder="9876543210" required name="contact_phone" pattern="^[0-9]+$">
+                    <!-- <input type="tel" class="form-control custom-input phone tel-input" id="contact_mobile" name="contact_mobile" placeholder="Your number" required pattern="^[0-9]+$"> -->
+                    <input class="phone2" type="hidden" id="phone2" name="cphone"/>
                     <div class="invalid-feedback"></div>
                   </div>
                 </div>
               </div>
 
-              <div class="row mt-4">
-                <div class="col">
+              <div class="row mt-lg-4 mt-0">
+                <div class="col-sm-6">
                   <div class="form-group"> 
                     <input type="email" class="form-control custom-input" id="contact_email" name="contact_email" placeholder="Your Email" required>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-sm-6">
                   <div class="form-group"> 
                     <input type="text" class="form-control custom-input" id="contact_company" name="contact_company" placeholder="Company" required>
                   </div>
@@ -158,53 +161,55 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
   <script type="text/javascript" src="./js/rcounterup.js"></script>
 
-  <script type="text/javascript" src="./js/phone-contact.js"></script>
+  <script type="text/javascript" src="./js/phone.js"></script>
   <script type="text/javascript" src="./js/custom.js"></script>
 
-  <script>
-
+  <!-- <script>
     $(document).ready(function () {
-
-      //validation
-      // let currForm1 = document.getElementById('contact-form');
-      // currForm1.querySelectorAll('.form-control').forEach(input => {
-      //   input.addEventListener(('input'), () => {
-      //     if (input.checkValidity()) {
-      //       input.classList.remove('is-invalid')
-      //       input.classList.add('is-valid');
-      //       $("#submitBtn").attr("disabled",false);
-      //     } else {
-      //       input.classList.remove('is-valid')
-      //       input.classList.add('is-invalid');
-      //     }
-      //     var is_valid = $('.form-control').length === $('.form-control.is-valid').length;
-      //     $("#submitBtn").attr("disabled", !is_valid);
-      //     console.log("disabled", !is_valid);
-      //     console.log("input.checkValidity()", input.checkValidity());
-          
-      //   });
-      // });
-
       (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
+        'use strict'
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var cforms = document.querySelectorAll('.needs-validation')
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(cforms)
+          .forEach(function (cform) {
+            cform.addEventListener('submit', function (event) {
+              let vale = $(".tel-input").intlTelInput("getNumber")
+              let valid = $(".tel-input").intlTelInput("isValidNumber")
+              let sbttn = this.querySelector('.submit-bttn');
+              console.warn('bttn', sbttn);
+              var telInput = document.querySelector(".tel-input")
+              var checkPhoneValidity = function () {
+                console.warn('checkPhoneValidity', valid);
+                if (valid) {
+                  $(".tel-input").removeClass("is-invalid")
+                  $(".tel-input").addClass("is-valid")
+                  // sbttn.prop('disabled', false);
+                } else {
+                  $(".tel-input").removeClass("is-valid")
+                  $(".tel-input").addClass("is-invalid")
+                  // sbttn.prop('disabled', true);
+                }
+              };
+              console.warn('tel-input', vale, this, valid, telInput)
+              telInput.addEventListener('keyup', checkPhoneValidity);
+              $(".phone2").val(vale);
+              checkPhoneValidity();
+
+              if (!cform.checkValidity()) {
+                console.warn('!cform.checkValidity1', cform.checkValidity());
+                event.preventDefault()
+                event.stopPropagation()
               }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
+              // console.warn('!cform.checkValidity2', cform.checkValidity());
+              cform.classList.add('was-validated')
+
+            }, false)
+          })
+      })()
 
     });
-  </script>
+  </script> -->
 
 </body>
 

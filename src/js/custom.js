@@ -40,6 +40,9 @@ $(document).ready(function () {
         dots: true,
       },
       576: {
+        items: 2.5
+      },
+      768: {
         items: 3
       },
       1000: {

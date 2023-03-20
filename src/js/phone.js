@@ -72,7 +72,7 @@ function checkPhoneValidation(element, isValidNumber) {
         console.warn('bttn', sbttn);
         var telInput = document.querySelector(".tel-input")
         var checkPhoneValidity = function() {
-          console.warn('checkPhoneValidity', valid);
+          // console.warn('checkPhoneValidity', valid);
           if (valid) {
             $(".tel-input").removeClass("is-invalid")
             $(".tel-input").addClass("is-valid")
@@ -92,6 +92,12 @@ function checkPhoneValidation(element, isValidNumber) {
           console.warn('!form.checkValidity1', form.checkValidity());
           event.preventDefault()
           event.stopPropagation()
+        }
+
+        if (valid === false) {
+          console.warn('!form.valid', valid);
+          event.preventDefault()
+          event.stopPropagation() 
         }
         // console.warn('!form.checkValidity2', form.checkValidity());
         form.classList.add('was-validated')

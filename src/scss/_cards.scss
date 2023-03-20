@@ -286,16 +286,101 @@
     margin-bottom: 0;
     margin-top: 12px;
   }
+  &:hover, &:focus, &:active {
+    background-color: $light4;
+    border-color: $main;;
+    .ttl {
+      color: $main;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .brand-card {
+    min-height: 250px;
+    min-width: calc(50% - 10px) !important;
+    max-width: calc(50% - 10px) !important;
+    padding: 20px 15px;
+    width: calc(50% - 10px);
+    .brand-card-bg {
+      height: 110px;
+      width: 110px;
+      right: 15px;
+      bottom: 20px;
+    }
+    .ttl {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .p {
+      font-size: 18px;
+      line-height: 24px;
+      max-width: 60%;
+    }
+  }
+  .applications-card {
+    height: 420px;
+    padding-bottom: 15px;
+    .applications-card-img {
+      height: 140px;
+      width: 150px;
+      top: 10px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .formula-card {
+    .formula-card-icon {
+      width: 29px;
+      height: 38px;
+      margin-bottom: 20px;
+    }
+    .ttl {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+    }
+    .p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+  .brand-card {
+    .brand-card-bg {
+      height: 70px;
+      width: 70px;
+      bottom: 20px;
+      right: 10px;
+    }
+    .ttl {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    .p {
+      max-width: 72%;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
   .brand-card {
-    min-height: 200px;
-    max-width: 420px;
-    padding: 15px 20px;
+    min-height: 180px;
+    width: 100%;
+    max-width: 100% !important;
+    min-width: 100% !important; 
     .ttl {
       font-size: 16px;
       line-height: 20px;
+      &::before {
+        height: 36px !important;
+        width: 48px !important;
+        background-size: 48% !important;
+      }
     }
     .p {
       font-size: 14px;
@@ -332,14 +417,30 @@
       margin-top: 48px;
       font-size: 11px;
       line-height: 17px;
+      .prod-info-icon {
+        position: absolute;
+        top: -2px;
+        left: auto;
+        right: 0;
+        img {
+          height: 20px;
+          width: 21px;
+        }
+        &.prod-info-icon-normal {
+          opacity: 1;
+        }
+        &.prod-info-icon-active {
+          opacity: 0;
+        }
+      }
     }
-  }
+  }    
 
   .formula-card {
     padding: 20px 15px;
     .formula-card-icon {
       width: 24px;
-      height: 32px;
+      height: 31px;
       margin-bottom: 20px;
     }
     .ttl {

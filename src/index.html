@@ -70,7 +70,7 @@
     <div class="container custom-container">
       <h1 class="sec-ttl text-light">Experience the Power of state of art Technology and Expertise with Nexus Polychem</span></h1>
       <p class="sec-para text-light">Experience the Power of Cutting-Edge Technology and Expertise with Nexus Polychem</p>
-      <button class="btn btn-primary bttn bttn-hero">Read More</button>
+      <a class="btn btn-primary bttn bttn-hero" href="./about.html">Read More</a>      
     </div>
   </section>
 
@@ -328,28 +328,28 @@
         </div>
         <div class="col-md-6 align-self-center">
           <div class="formula-cards-wrap">
-            <div class="formula-card">
+            <div class="formula-card st">
               <div class="formula-card-icon">
                 <img src="./assets/homepage/formula-card-icon.png" alt="ic">
               </div>
               <p class="ttl">Experience</p>
               <p class="p">With experienced engineers, we understand clients' needs & can assist in finding the suitable product & grade.</p>
             </div>
-            <div class="formula-card">
+            <div class="formula-card st">
               <div class="formula-card-icon">
                 <img src="./assets/homepage/formula-card-icon.png" alt="ic">
               </div>
               <p class="ttl">Flexibility</p>
               <p class="p">Able to adjust and adapt unique needs of each customer</p>
             </div>
-            <div class="formula-card">
+            <div class="formula-card st">
               <div class="formula-card-icon">
                 <img src="./assets/homepage/formula-card-icon.png" alt="ic">
               </div>
               <p class="ttl">Service</p>
               <p class="p">To produce cost-effective and top-quality products.</p>
             </div>
-            <div class="formula-card">
+            <div class="formula-card st">
               <div class="formula-card-icon">
                 <img src="./assets/homepage/formula-card-icon.png" alt="ic">
               </div>
@@ -478,7 +478,7 @@
     </div>
   </section>
 
-  <section class="bg-dark common-section quote-section">
+  <!-- <section class="bg-dark common-section quote-section">
     <div class="container custom-container">
       <div class="row">
         <div class="col-12">
@@ -504,14 +504,14 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="bg-light common-section ordersDelivered-section" id="ordersDelivered-section">
+  <section class="bg-light common-section ordersDelivered-section pattern" id="ordersDelivered-section">
     <div class="container custom-container">
       <div class="row">
         <div class="col-12">
           <h3 class="sec-ttl">Orders delivered</h3>
-          <span class="value"><span class="ani-number">15,500</span><sup>+</sup></span>
+          <span class="value"><span class="ani-number">25,500</span><sup>+</sup></span>
           <!-- <span class="count-num">1236</span> -->
           <div class="values-blk-wrapper">
             <div class="values-blk">
@@ -520,7 +520,7 @@
             </div>
             <div class="values-blk">
               <p class="value-ttl">Customer satisfaction rates</p>
-              <p class="value-number"><span class="">4.2</span></p>
+              <p class="value-number"><span class="">4.3</span></p>
             </div>
           </div>
         </div>
@@ -533,39 +533,41 @@
       <div class="row">
         <div class="col-md-auto">
           <div class="sec-ttl-wrap">
-            <h3 class="sec-ttl text-dark">Place Your Order</h3>
+            <h3 class="sec-ttl text-dark">Get instant quote</h3>
+            <p class="p">Get an instant price quote for our high-quality chemical products by selecting your desired product and quantity.</p>
           </div>
         </div>
         <div class="col">
           <div class="specific-form-wrap">
-            <form action="#" class="needs-validation specific-form" novalidate>
+            <form action="form.php" method="POST" class="needs-validation specific-form" novalidate>
               <div class="row">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <input type="text" class="form-control custom-input2" id="anything_name" placeholder="Rohit Sharma"
+                    <input type="text" class="form-control custom-input2" name="aname" id="anything_name" placeholder="Rohit Sharma"
                       required>
                   </div>
                 </div>
                 <div class="col-md-6 col-12">
                   <div class="form-group">
                     <input type="tel" class="form-control custom-input2 phone tel-input" id="anything_mobile"
-                      placeholder="9876543210" required name="phone" pattern="^[0-9]+$">
+                      placeholder="9876543210" required name="aphone" pattern="^[0-9]+$">
+                    <input class="phone2" type="hidden" id="phone2" name="bphone"/>
                     <div class="invalid-feedback"></div>
                   </div>
                 </div>
               </div>
-              <div class="row mt-md-4 mt-3">
+              <div class="row mt-md-4 mt-0">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <input type="text" class="form-control custom-input2" id="anything_company" placeholder="Company"
+                    <input type="text" class="form-control custom-input2" name="acompany" id="anything_company" placeholder="Company"
                       required>
                   </div>
                 </div>
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <select class="form-control custom-input2 custom-select2" id="anything_selectProduct" required>
-                      <option value="default" selected disabled>Select Product</option>
-                      <option value="prod_organotin_stabilzer">Organotin Stabilzer</option>
+                    <select class="form-control custom-input2 custom-select2" id="anything_selectProduct" name="aproduct" required>
+                      <option value="default" disabled>Select Product</option>
+                      <option value="prod_organotin_stabilzer" selected>Organotin Stabilzer</option>
                       <option value="prod_antimony_stablizer">Antimony Stablizers</option>
                       <option value="prod_leadbased_stabilizer">Lead Based Stabilizer</option>
                       <option value="prod_calcium_zinc_stabilizer">Calcium Zinc Stabilizer</option>
@@ -578,16 +580,16 @@
                   </div>
                 </div>
               </div>
-              <div class="row mt-md-4 mt-3">
+              <div class="row mt-md-4 mt-0">
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <input type="email" class="form-control custom-input2" id="anything_email" placeholder="Email ID"
+                    <input type="email" class="form-control custom-input2" name="aemail" id="anything_email" placeholder="Email ID"
                       required>
                   </div>
                 </div>
                 <div class="col-md-6 col-12">
                   <div class="form-group">
-                    <textarea class="form-control custom-input2" placeholder="Describe your requirement..."
+                    <textarea class="form-control custom-input2" name="arequirement" placeholder="Describe your requirement..."
                     id="" rows="2" required></textarea>
                   </div>
                 </div>

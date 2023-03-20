@@ -347,7 +347,9 @@
             padding: 5px 0;
           }
           &:has(a) {
-            background: red;
+            span {
+              display: none !important;
+            }
           }
         }
       }
