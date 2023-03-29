@@ -272,7 +272,7 @@
   .header-nav {
     height: auto;
     background: $white !important;
-    padding: 5px 40px;
+    padding: 10px 40px;
     #main_nav {
       margin: 10px 0;
     }
@@ -280,7 +280,7 @@
       .nav-item {
         .nav-link {
           margin-left: 0;
-          padding: 7px 15px;
+          padding: 10px 15px;
           &::after {
             display: none !important;
           }
@@ -302,6 +302,7 @@
         overflow: hidden;
         .level1 {
           border-bottom: 1px solid $light4;
+          font-size: 9px;
           span {
             background: url('../assets/icons/prod-title-icon-active.svg') no-repeat center;
             right: 15px;
@@ -317,6 +318,7 @@
           max-width: 100%;
           padding: 0;
           border-radius: 4px;
+          font-size: 9px;
           li {
             padding: 0;
             .dropdown-item {
@@ -344,12 +346,9 @@
         > li {
           padding: 0;
           .dropdown-item {
-            padding: 5px 0;
-          }
-          &:has(a) {
-            span {
-              display: none !important;
-            }
+            padding: 8px 0;
+            font-size: 11px;
+            font-weight: 700;
           }
         }
       }
@@ -377,10 +376,6 @@
     }
     .navbar-nav {
       .nav-item {
-        .nav-link {
-          font-size: 10px;
-          line-height: 16px;
-        }
       }
     }
     .dropdown {
