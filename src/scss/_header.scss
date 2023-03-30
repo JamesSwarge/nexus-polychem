@@ -2,8 +2,10 @@
 
 .scroll-down {
   .header-nav {
-    transform: translateY(0px);
+    // transform: translateY(0px);
+    transform: translateY(80px);
     background: $white !important;
+    filter: drop-shadow(0 -10px 10px rgb(170, 170, 170));
     .navbar-nav .nav-item .nav-link {
       color: $dark1 !important;
     }
@@ -16,7 +18,7 @@
   .header-nav {
     transform: translateY(80px);
     background: $white !important;
-    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+    filter: drop-shadow(0 -10px 10px rgb(170, 170, 170));
     .navbar-nav .nav-item .nav-link {
       color: $dark1 !important;
     }
@@ -46,6 +48,8 @@
   width: 100vw;
   transition: all .3s ease-in-out;
   transform: translateY(80px);
+  box-shadow: none;
+  filter: none;
   .navbar-brand {
     max-height: 50px;
     max-width: 180px;
