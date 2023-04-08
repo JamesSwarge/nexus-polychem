@@ -14,13 +14,6 @@ $(document).ready(function () {
     $(this).next().find(".level3").height(val);
   });
 
-  // $(".level1").click(function (e) {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-  //   console.log('e', e);
-  //   console.log('e', e.delegateTarget.nextElementSibling);
-  // })
-
   //multi select
   $('.customSelect').selectpicker();
 
@@ -81,57 +74,6 @@ $(document).ready(function () {
       }
     }
   })
-
-  // $('.other-product-cards-carousel').owlCarousel({
-  //   autoplay: true,
-  //   autoplayTimeout: 360000,
-  //   autoplayHoverPause: false,
-  //   mouseDrag: true,
-  //   loop: true,
-  //   margin: 10, 
-  //   nav: false,
-  //   dots: false,
-  //   margin: 16,
-  //   items: 3.5,
-  //   responsive: {
-  //     0: {
-  //       items: 1.3,
-  //       dots: true,
-  //     },
-  //     576: {
-  //       items: 2.5
-  //     },
-  //     768: {
-  //       items: 3
-  //     },
-  //     1000: {
-  //       items: 3.7
-  //     }
-  //   }
-  // })
-
-
-  //header mobile
-
-  // $('html, body').animate({
-  //   scrollTop: ($('.pattern').first().offset().top)
-  // }, 500);
-
-  // const navHeight = $('.navbar').height();
-  // console.info("asd1", navHeight)
-  // var mainbottom = $('.header-nav').offset().top + navHeight + 200;
-  // console.info("asd2", mainbottom)
-  // $(window).on('scroll', function () {
-  //   // console.info("scrolled")
-  //   stop = Math.round($(window).scrollTop());
-  //   if (stop > mainbottom) {
-  //     $('#header-nav').addClass('navbar-fixed-top');
-  //     console.info("up")
-  //   } else {
-  //     $('#header-nav').removeClass('navbar-fixed-top');
-  //     console.info("up2")
-  //   }
-  // });
 
   function responsive(maxWidth) {
     if (maxWidth.matches) {
