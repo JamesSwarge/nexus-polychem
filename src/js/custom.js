@@ -1,4 +1,4 @@
-includeHTML();
+// includeHTML();
 
 $(document).ready(function () {  
   //header
@@ -74,6 +74,8 @@ $(document).ready(function () {
       }
     }
   })
+
+  // alert("hi...");
 
   function responsive(maxWidth) {
     if (maxWidth.matches) {

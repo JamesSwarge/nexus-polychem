@@ -5,7 +5,8 @@
   "scripts": {
     "start": "parcel src/*.html",
     "dev": "parcel serve src/*.html --public-url / --dist-dir dist",
-    "prod": "parcel build src/*.html --public-url ./ --dist-dir dist",
+    "prod": "parcel build src/*.html --public-url --dist-dir dist",
+    "live": "parcel build src/index.html --public-url ./ --dist-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
