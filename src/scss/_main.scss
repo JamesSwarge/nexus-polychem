@@ -83,6 +83,26 @@ img {
       max-height: 520px;
     }
   }
+  &.other-product-cards-carousel {
+    .owl-nav {
+      svg {
+        circle {
+          stroke: $main
+        }
+        g path {
+          stroke: $main
+        }
+      }
+    }
+    .owl-dots {
+      .owl-dot {
+        background: $main;
+        &.active {
+          background: $main;
+        }
+      }
+    }
+  }
   .owl-nav {
     position: absolute;
     top: auto;
@@ -2666,7 +2686,7 @@ footer {
   .productDetails-products-section {
     .product-cards-carousel-wrap {
       .owl-dots {
-        display: none;
+        // display: none;
       }
     }
   }
