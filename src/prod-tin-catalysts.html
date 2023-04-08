@@ -66,7 +66,64 @@
 
 <body class="prod-page">
 
-  <div w3-include-html="./header.html"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light header-nav" id="header-nav">
+    <div class="container custom-container">
+      <a class="navbar-brand" href="/">
+        <img class="header-logo" src="./assets/header/header-logo.png" alt="logo">
+      </a>
+      <button id="custom-toggler-bttn" class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">  
+        <ul class="navbar-nav ms-auto">          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle topLevel st" href="#" data-bs-toggle="dropdown">Products</a>
+            <ul class="dropdown-menu">  
+              <li><a class="dropdown-item level1" id="lvl1">PVC Heat stabilizer<span></span></a>
+                <ul class="submenu dropdown-menu level2">
+                  <li><a class="dropdown-item dlvl-2" href="./prod-organotin-stabilzer.html">OrganoTin Stabilizer<span></span></a></li>
+                  <li><a class="dropdown-item dlvl-2" href="./prod-antimony-stabilizer.html">Antimony mercaptide<span></span></a></li>
+                  <li><a class="dropdown-item dlvl-2" href="./prod-lead-based-stabilizer.html">Lead Based Stabilizer<span></span></a></li>
+                  <li><a class="dropdown-item dlvl-2" href="./prod-metal-stearates.html">Mixed Metals<span></span></a></li>
+                  <li><a class="dropdown-item dlvl-2" href="./prod-calcium-zinc-stabilzer.html">Calcium zinc stabilizer<span></span></a></li>
+                </ul>
+              </li>  
+              <li><a class="dropdown-item level1" href="#">Specality additives<span></span></a>
+                <ul class="submenu dropdown-menu level2">
+                  <li><a class="dropdown-item" href="./prod-lubricants.html">Lubricants<span></span></a></li>
+                  <li><a class="dropdown-item" href="./prod-additives.html">Impact Modifier & Procession aid<span></span></a></li>
+                  <li><a class="dropdown-item" href="./prod-metal-stearates.html">Metallic steareates<span></span></a></li>
+                </ul>
+              </li>  
+              <li><a class="dropdown-item level1" href="#">Compounds<span></span></a>
+                <ul class="submenu dropdown-menu level2">
+                  <li><a class="dropdown-item" href="./prod-tin-catalysts.html">Tin Catalysts<span></span></a></li>
+                  <li><a class="dropdown-item" href="./prod-tin-compounds.html">Tin Compound<span></span></a></li>
+                </ul>
+              </li>              
+            </ul>
+          </li>  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle topLevel st" href="#" data-bs-toggle="dropdown">Applications</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item level1" href="./application-pvc-pipes-wires.html">PVC pipes and wires<span></span></a></li>            
+              <li><a class="dropdown-item level1" href="./application-pvc-calendaring.html">PVC calendaring, soft  & shrink Films<span></span></a></li>            
+              <li><a class="dropdown-item level1" href="./application-hose-flexible-tubing.html">Suction hose & flexible tubing<span></span></a></li>            
+              <li><a class="dropdown-item level1" href="./application-pvc-footwear-leather.html">PVC footwear & leather<span></span></a></li>            
+              <li><a class="dropdown-item level1" href="./application-anti-fungal-and-pharma.html">Anti-fungal & Pharma intermediate <span></span></a></li>            
+              <li><a class="dropdown-item level1" href="./application-xlpe-polymer-catalyst.html">XLPE & Polymer Catalyst<span></span></a></li>            
+              <li><a class="dropdown-item level1" href="./application-food-grades-and-medicinal.html">Food grade<span></span></a></li>            
+              <li><a class="dropdown-item level1" href="./application-medical.html">Medical application<span></span></a></li>          
+              <li><a class="dropdown-item level1" href="./application-pvc-wires-and-cables.html">PVC wires & cables<span></span></a></li>            
+            </ul>
+          </li>  
+          <li class="nav-item"><a class="nav-link topLevel st" href="./about.html">About</a></li>
+          <li class="nav-item"> <a class="nav-link topLevel st" href="./contact.html">Contact</a></li>  
+        </ul>  
+      </div>
+    </div>
+  </nav>
 
   <section class="common-section productDetails-hero-section">
     <div class="productDetails-hero-section-bg">
